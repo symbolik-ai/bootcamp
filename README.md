@@ -43,6 +43,7 @@ Then `pyenv install 3.11.0` and create a virtual environment for this bootcamp:
 pyenv virtualenv 3.11.0 symbolik-bootcamp
 pyenv activate symbolik-bootcamp
 ```
+
 <br>
 
 **❖ Windows:** [if you already installed python previously](https://github.com/pyenv-win/pyenv-win/blob/master/docs/installation.md#python-pip), otherwise [install via PowerShell](https://github.com/pyenv-win/pyenv-win/blob/master/docs/installation.md#powershell). 
@@ -68,6 +69,8 @@ Every time you make a new terminal session, you will need to reactivate the `vir
 - **❖ Windows:** `.\symbolik-bootcamp\Scripts\activate`
 - **  Mac:** `pyenv activate symbolik-bootcamp`
 
+<br>
+<br>
 ### LangChain installation
 With the `symbolik-bootcamp` activated, proceed to install LangChain using `pip`. Don't worry, you already have `pip` installed as it ships with your python installation from the previous step.
 
