@@ -80,6 +80,7 @@ With the `symbolik-bootcamp` activated, proceed to install LangChain using `pip`
 
 https://python.langchain.com/docs/get_started/installation
 <br>
+
 ### Your first code!
 After cloning this repository at the beginning of the day, open the repo in `vscode` (open folder).
 Install the [python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) extensions.
@@ -98,3 +99,9 @@ Install the [python](https://marketplace.visualstudio.com/items?itemName=ms-pyth
 9. Follow the [Quickstart Guide](https://python.langchain.com/docs/get_started/quickstart) from LangChain to complete the code in either `quickstart.ipynb` or `quickstart.py`.
 
 Well done! 🙌 🚀 Setup can be daunting, but you got through it and can focus on the code from now on 🌴
+<br>
+<br>
+
+___
+# 🗿 Day 2 - CaveGPT
+Today you will create a ChatGPT clone, but where the AI talks in simple caveman language and uses lots of 🔥🦴🦶 emojis.
