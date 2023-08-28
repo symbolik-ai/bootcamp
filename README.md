@@ -71,6 +71,7 @@ Every time you make a new terminal session, you will need to reactivate the `vir
 
 <br>
 <br>
+
 ### LangChain installation
 With the `symbolik-bootcamp` activated, proceed to install LangChain using `pip`. Don't worry, you already have `pip` installed as it ships with your python installation from the previous step.
 
