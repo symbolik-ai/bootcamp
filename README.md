@@ -13,8 +13,9 @@ ___
 3. Create a folder anywhere you'd like called `symbolik`. Personally I have a folder called `dev` in my ***user folder*** that I use for all development projects. I put `symbolik` into that one. All repositories from the Symbolik organization is then cloned into that folder.
 4. Clone this repository to your `symbolik` folder: [(YouTube) Clone a repository with GitHub Desktop](https://www.youtube.com/watch?v=PoZNIbs_wx8).
 
-#### Python installation
+### Python installation
 Symbolik uses `pyenv` + `virtualenv` for managing python version and virtual environments at the same time. Don't worry if you're [not familiar with these terms](https://realpython.com/intro-to-pyenv/).
+
 <br>
 
 **  Mac:** [(Brew)](https://brew.sh/) → `brew install pyenv pyenv-virtualenv`
