@@ -87,7 +87,7 @@ Install the [python](https://marketplace.visualstudio.com/items?itemName=ms-pyth
 
 1. open `./Day 1/quickstart.py`
 2. <kbd>shift</kbd>+<kbd>cmd</kbd>+<kbd>P</kbd> to open command palette, search for 'select interpreter' (python). Select `symbolik-bootcamp`.
-3. Copy the `example.env` file and rename to just `.env`
+3. Duplicate the `example.env` file and rename to just `.env`
 4. Obtain an API key from OpenAI: [guide](https://www.maisieai.com/help/how-to-get-an-openai-api-key-for-chatgpt)
 5. Paste the key in the new `.env` file
 6. Install [python-dotenv](https://pypi.org/project/python-dotenv/) to store the API key safely
