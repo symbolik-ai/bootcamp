@@ -16,6 +16,7 @@ ___
 #### Python installation
 Symbolik uses `pyenv` + `virtualenv` for managing python version and virtual environments at the same time. Don't worry if you're [not familiar with these terms](https://realpython.com/intro-to-pyenv/).
 <br>
+
 **  Mac:** [(Brew)](https://brew.sh/) → `brew install pyenv pyenv-virtualenv`
 
 Add this code to your `~/.zshrc` (that's mac os default shells configuration file)
