@@ -10,8 +10,8 @@ At the end of the day you will run your first LangChain code! 🎉
 1. Install [GitHub Desktop](https://desktop.github.com/) and create a [GitHub](https://github.com/) account.
 
 2. Learn about Git if you're not familiar (important):
-	+ [(YouTube) Git in 100 seconds](https://www.youtube.com/watch?v=hwP7WQkmECE)
-	+ Video 1-4 on [(Sphere playlist) Git and GitHub for Poets](https://sphere.segefjord.space/tech/git)
+	- [(YouTube) Git in 100 seconds](https://www.youtube.com/watch?v=hwP7WQkmECE)
+	- Video 1-4 on [(Sphere playlist) Git and GitHub for Poets](https://sphere.segefjord.space/tech/git)
 
 3. Create a folder anywhere you'd like called `symbolik`. Personally I have a folder called `dev` in my ***user folder*** that I use for all development projects. I put `symbolik` into that one. All repositories from the Symbolik organization is then cloned into that folder.
 4. Clone this repository to your `symbolik` folder: [(YouTube) Clone a repository with GitHub Desktop](https://www.youtube.com/watch?v=PoZNIbs_wx8).
@@ -65,8 +65,8 @@ virtualenv --python PASTE-PATH-HERE symbolik-bootcamp
 <br>
 
 Every time you make a new terminal session, you will need to reactivate the `virtualenv` using:
-**❖ Windows:** `.\symbolik-bootcamp\Scripts\activate`
-**  Mac:** `pyenv activate symbolik-bootcamp`
+- **❖ Windows:** `.\symbolik-bootcamp\Scripts\activate`
+- **  Mac:** `pyenv activate symbolik-bootcamp`
 
 ### LangChain installation
 With the `symbolik-bootcamp` activated, proceed to install LangChain using `pip`. Don't worry, you already have `pip` installed as it ships with your python installation from the previous step.
