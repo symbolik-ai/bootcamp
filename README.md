@@ -13,7 +13,7 @@ At the end of the day you will run your first LangChain code! 🎉
 	- [(YouTube) Git in 100 seconds](https://www.youtube.com/watch?v=hwP7WQkmECE)
 	- Video 1-4 on [(Sphere playlist) Git and GitHub for Poets](https://sphere.segefjord.space/tech/git)
 
-3. Create a folder anywhere you'd like called `symbolik`. Personally I have a folder called `dev` in my ***user folder*** that I use for all development projects. I put `symbolik` into that one. All repositories from the Symbolik organization is then cloned into that folder.
+3. Create a folder anywhere you'd like called `symbolik`. Personally I have a folder called `dev` in my ***user folder*** that I use for all development projects. I put `symbolik` into that one. All repositories from the Symbolik organization is then cloned into `dev/symbolik`.
 4. Clone this repository to your `symbolik` folder: [(YouTube) Clone a repository with GitHub Desktop](https://www.youtube.com/watch?v=PoZNIbs_wx8).
 
 ### Python installation
@@ -76,7 +76,7 @@ Every time you make a new terminal session, you will need to reactivate the `vir
 With the `symbolik-bootcamp` activated, proceed to install LangChain using `pip`. Don't worry, you already have `pip` installed as it ships with your python installation from the previous step.
 
 1. Make sure the `virtualenv (symbolik-bootcamp)` is activated and that you're `cd`'ed into the `symbolik` folder.
-2. Use the official release and install all integrations.
+2. Use the official release and install just the bare minimum requirements.
 
 https://python.langchain.com/docs/get_started/installation
 <br>
@@ -84,3 +84,17 @@ https://python.langchain.com/docs/get_started/installation
 After cloning this repository at the beginning of the day, open the repo in `vscode` (open folder).
 Install the [python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) extensions.
 
+1. open `./Day 1/quickstart.py`
+2. <kbd>shift</kbd>+<kbd>cmd</kbd>+<kbd>P</kbd> to open command palette, search for 'select interpreter' (python). Select `symbolik-bootcamp`.
+3. Copy the `example.env` file and rename to just `.env`
+4. Obtain an API key from OpenAI: [guide](https://www.maisieai.com/help/how-to-get-an-openai-api-key-for-chatgpt)
+5. Paste the key in the new `.env` file
+6. Install [python-dotenv](https://pypi.org/project/python-dotenv/) to store the API key safely
+	- [(YouTube) About .env files](https://www.youtube.com/watch?v=17UVejOw3zA)
+
+7. Run the `quickstart.py` code using the `vscode` button (top right)
+8. Play around with the notebook version! (`quickstart.ipynb`)
+	- notice how the outputs are automatically printed instead of using `print()`
+9. Follow the [Quickstart Guide](https://python.langchain.com/docs/get_started/quickstart) from LangChain to complete the code in either `quickstart.ipynb` or `quickstart.py`.
+
+Well done! 🙌 🚀 Setup can be daunting, but you got through it and can focus on the code from now on 🌴
