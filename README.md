@@ -105,3 +105,45 @@ Well done! 🙌 🚀 Setup can be daunting, but you got through it and can focus
 ___
 # 🗿 Day 2 - CaveGPT
 Today you will create a ChatGPT clone, but where the AI talks in simple caveman language and uses lots of 🔥🦴🦶 emojis.
+
+1. Refresh your knowledge on prompt templates in LangChain using the [Quickstart](https://python.langchain.com/docs/get_started/quickstart) if needed. Also check out the diagram on the [Model I/O](https://python.langchain.com/docs/modules/model_io/) page. Design a few random templates. Use `templates.py`
+	- Remember to use the `print` statement to see output, as the `.py` file is not a notebook
+	- You can change the filetype to `.ipynb` if you prefer notebooks
+2. Learn about the simple memory types in LangChain. Use `memory.py`
+	- [Conversation buffer memory](https://python.langchain.com/docs/modules/memory/types/buffer)
+	- [Conversation buffer window memory](https://python.langchain.com/docs/modules/memory/types/buffer_window)
+		ChatGPT (the app) likely uses a simple technique similar to `ConversationBufferWindowMemory`.
+
+3. Combine your newfound knowledge about prompt templates and memory in LangChain to create the prototype app in `CaveGPT.ipynb` using the [LLMChain with memory](https://python.langchain.com/docs/modules/memory/adding_memory).
+
+**Tip:** use the  [Chat Model](https://python.langchain.com/docs/modules/model_io/models/chat/) version of the OpenAI models, rather than the base-model as is used per the LangChain documentation (29/8/23). Sometimes the documentation in LangChain isn't up to date, because so much is changing in this space, and LangChain is just open source software. It's only as good as it's contributors.
+```python
+from langchain.chat_models import ChatOpenAI
+llm = ChatOpenAI()
+# instead of LangChain documentation (29/8/23):
+from langchain.llms import OpenAI
+llm = OpenAI()
+```
+
+**Tip 2:** they use "Chatbot:" in their example code `template`, but it should be "AI:"
+This is again just a case of outdated documentation.
+
+The key to solving this is just reading the documentation links provided in step 3, and then applying some prompt engineering to make the chatbot talk like a caveman. Here is my proposed solution. Try solving yourself. It might take a lot of trial and error, but you will learn from that.
+<details>
+  <summary>[spoiler] (Solution): prompt engineering</summary>
+  
+	This is the prompt template I came up with, seems to work pretty well:
+	
+	```python
+	template = """You (AI) are a funny teacher who teaches any subject always using caveman language and emojis to educate. You (AI) provide short explanations of subjects as an overview, but always highlight important words that you can expand upon. Explain to me (human) like I'm a caveman (but assume knowledge about the modern world, I'm not really a caveman). Prefer emojis (or even simple math symbols) rather than text. Your grammar needs to be a little caveman-broken. You always explain your answers.
+	
+	{chat_history}
+	Human: {human_input}
+	AI:"""
+	```
+
+</details>
+
+Even though my solution works quite well most of the time, there's room for improvement.
+4. Use [in-context learning](https://thegradient.pub/in-context-learning-in-context/) to improve the performance of this caveman teaching bot.
+5. Provide the caveman with oddly specific knowledge about yourself. Your personal caveman 💀
