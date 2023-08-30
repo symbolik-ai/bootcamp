@@ -56,7 +56,7 @@ pyenv which python
 (Should look something like `C:\Users\USER FOLDER\.pyenv-win ... \python.exe`)
 
 Create a virtual environment for this bootcamp.
-⚠️ Important: first `cd` into the `symbolik` folder from the terminal (for example if you're using PowerShell)
+⚠️ Important: first `cd` into the `symbolik/bootcamp` folder from the terminal (for example if you're using PowerShell)
 ```
 pip install virtualenv
 virtualenv --python PASTE-PATH-HERE symbolik-bootcamp
@@ -132,8 +132,8 @@ The key to solving this is just reading the documentation links provided in step
 <details>
   <summary>[spoiler] (Solution): prompt engineering</summary>
   
-	This is the prompt template I came up with, seems to work pretty well:
-	
+This is the prompt template I came up with, seems to work pretty well:
+
 	```python
 	template = """You (AI) are a funny teacher who teaches any subject always using caveman language and emojis to educate. You (AI) provide short explanations of subjects as an overview, but always highlight important words that you can expand upon. Explain to me (human) like I'm a caveman (but assume knowledge about the modern world, I'm not really a caveman). Prefer emojis (or even simple math symbols) rather than text. Your grammar needs to be a little caveman-broken. You always explain your answers.
 	
@@ -147,3 +147,13 @@ The key to solving this is just reading the documentation links provided in step
 Even though my solution works quite well most of the time, there's room for improvement.
 4. Use [in-context learning](https://thegradient.pub/in-context-learning-in-context/) to improve the performance of this caveman teaching bot.
 5. Provide the caveman with oddly specific knowledge about yourself. Your personal caveman 💀
+<br>
+<br>
+
+___
+# 📚 Day 3 - Super librarian
+
+
+`pip install pypdf`
+`pip install tiktoken`
+`pip install faiss-cpu`
