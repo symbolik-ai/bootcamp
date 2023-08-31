@@ -145,6 +145,7 @@ AI:"""
 </details>
 
 Even though my solution works quite well most of the time, there's room for improvement.
+
 4. Use [in-context learning](https://sphere.segefjord.space/ai/intro?.=4) to improve the performance of this caveman teaching bot.
 5. Provide the caveman with oddly specific knowledge about yourself. Your personal caveman 💀
 <br>
@@ -166,16 +167,18 @@ pip install pypdf
 pip install tiktoken
 pip install faiss-cpu
 ```
+
 1. Open `Day 3/intro.ipynb` and take a look at the [LangChain PDF Document Loader](https://python.langchain.com/docs/modules/data_connection/document_loaders/pdf). It's used in that notebook together with FAISS (simple vector DB) to generate [embeddings](https://sphere.segefjord.space/ai/intro?.=6).
 	- Change the question you "ask the book" (`similarity_search`)
 	- Change the book and come up with a new question
-	- Try making a `PromptTemplate` where you pass your `{question}` in together with the output from the similarity search. Do some prompt engineering.
+	- Use the `similarity_search` for loop, but instead of printing each result, combine them into a single string `combined`.
+	- Try making a `PromptTemplate` where you pass your `{question}` in together with the `{combined}` output from the similarity search. Do some prompt engineering.
 <details>
   <summary>[spoiler] (Solution): prompt engineering</summary>
 
 ```python
 template = """Given the following section of a book:
-{search_output}
+{combined}
 
 Answer the following question:
 {Question}
@@ -190,8 +193,10 @@ Answer:
 	- [LangChain 🦜🔗 Basics Course - Video 10 (**stop at 3:35**)](https://sphere.segefjord.space/ai/langchain-basics?.=9)
 	- [LangChain 🦜🔗 Basics Course - Video 11 (**stop at 7:24**)](https://sphere.segefjord.space/ai/langchain-basics?.=10)
 
-3. Use the [documentation](https://python.langchain.com/docs/modules/data_connection/document_loaders/pdf) on `PyPDFDirectoryLoader` to load all books at once.
-4. 
+3. Create a new notebook, `Day 3/chatdocs.ipynb`
+4. Use the [documentation](https://python.langchain.com/docs/modules/data_connection/document_loaders/pdf) on `PyPDFDirectoryLoader` to load all books at once.
+5. Create a vector DB (`faiss_index`) for the embeddings of all the books using FAISS (just as in `intro.ipynb`).
+6. Use the [LLMChain with memory](https://python.langchain.com/docs/modules/memory/adding_memory) from Day 2 to create a chatbot, but this time it should always pass the users messages through the `similarity_search` before answering the human.
 <br>
 <br>
 
