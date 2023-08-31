@@ -153,7 +153,7 @@ Even though my solution works quite well most of the time, there's room for impr
 
 ___
 # 🧠 Day 3 - Brain Power
-Today+tomorrow we will make an AI read [40+ books in a few minutes](https://youtu.be/h-mUGj41hWA?t=87).
+Today+tomorrow we will make an AI read [10+ books in a few minutes](https://youtu.be/h-mUGj41hWA?t=87).
 
 0. Visit Paul Graham's famous online [essays](http://www.paulgraham.com/articles.html) - they are legendary. [Paul Graham (Y Combinator → Airbnb, Dropbox, Stripe, Reddit)](http://www.paulgraham.com/bio.html) has been one of the most culturally influential people in Silicon Valley, and still is today:
 	- ["What Startups Are Really Like"](http://www.paulgraham.com/really.html)
@@ -208,3 +208,9 @@ To kick off the day, read ["How To Start a Startup"](http://www.paulgraham.com/s
 	- [LangChain 🦜🔗 Basics Course - Video 19 (**full video**)](https://sphere.segefjord.space/ai/langchain-basics?.=18)
 			The Jupyter notebook from his video containing all code is located in:
 			`./Day 3/ 5 Levels Of Summarization - Novice To Expert.ipynb`
+2. Use the ***"Best Representation Vectors"*** method presented towards the end of the video to make a summary of one of the books from `Day 3/books` . Create a new notebook for this task.
+<br>
+
+The prototype chatbot you created yesterday is able to lookup selected pages of a book that seems relevant to a question, and include it in the context window. However, this means the AI doesn't have an *"understanding"* of the books in terms of the bigger picture. It's only able to understand the book a few pages at a time, stemming from the `similarity_search`. The ***"Best Representation Vectors"*** technique proposes a far more advanced approach with lots of advantages over a simple `similarity_search`.
+
+3. (***Advanced***) Can the same technique be used to give the AI a full comprehension of every 10+ books found in `Day 3/books`? Create a new notebook for this task.
