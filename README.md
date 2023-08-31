@@ -86,7 +86,7 @@ After cloning this repository at the beginning of the day, open the repo in `vsc
 Install the [python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) extensions.
 
 1. open `./Day 1/quickstart.py`
-2. <kbd>shift</kbd>+<kbd>cmd</kbd>+<kbd>P</kbd> to open command palette, search for 'select interpreter' (python). Select `symbolik-bootcamp`.
+2. <kbd>shift</kbd>+<kbd>cmd</kbd>+<kbd>P</kbd> to open command palette, search for 'Python: select interpreter'. Pick `symbolik-bootcamp`.
 3. Duplicate the `example.env` file and rename to just `.env`
 4. Obtain an API key from OpenAI: [guide](https://www.maisieai.com/help/how-to-get-an-openai-api-key-for-chatgpt)
 5. Paste the key in the new `.env` file
@@ -145,15 +145,61 @@ AI:"""
 </details>
 
 Even though my solution works quite well most of the time, there's room for improvement.
-4. Use [in-context learning](https://thegradient.pub/in-context-learning-in-context/) to improve the performance of this caveman teaching bot.
+4. Use [in-context learning](https://sphere.segefjord.space/ai/intro?.=4) to improve the performance of this caveman teaching bot.
 5. Provide the caveman with oddly specific knowledge about yourself. Your personal caveman 💀
 <br>
 <br>
 
 ___
-# 📚 Day 3 - Super librarian
+# 🧠 Day 3 - Brain Power
+Today+tomorrow we will make an AI read [40+ books in a few minutes](https://youtu.be/h-mUGj41hWA?t=87).
 
+0. Visit Paul Graham's famous online [essays](http://www.paulgraham.com/articles.html) - they are legendary. [Paul Graham (Y Combinator → Airbnb, Dropbox, Stripe, Reddit)](http://www.paulgraham.com/bio.html) has been one of the most culturally influential people in Silicon Valley, and still is today:
+	- ["What Startups Are Really Like"](http://www.paulgraham.com/really.html)
+	- ["Keep Your Identity Small"](http://www.paulgraham.com/identity.html)
 
-`pip install pypdf`
-`pip install tiktoken`
-`pip install faiss-cpu`
+Before getting started today, you should [create a branch](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/managing-branches-in-github-desktop) called `san-karem` and [make commits](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/committing-and-reviewing-changes-to-your-project-in-github-desktop) for each day you finished in the bootcamp. ⚠️ Make sure you are on `san-karem` branch while committing and pushing. Each commit message should be in the format `"✅ finished day x"` with no other text. To isolate each day from each other into separate commits, [deselect/select changes](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/committing-and-reviewing-changes-to-your-project-in-github-desktop#selecting-changes-to-include-in-a-commit) accordingly.
+
+Let's install packages we need for today. Remember to activate the `(symbolik-core)` virtual environment before installing.
+```
+pip install pypdf
+pip install tiktoken
+pip install faiss-cpu
+```
+1. Open `Day 3/intro.ipynb` and take a look at the [LangChain PDF Document Loader](https://python.langchain.com/docs/modules/data_connection/document_loaders/pdf). It's used in that notebook together with FAISS (simple vector DB) to generate [embeddings](https://sphere.segefjord.space/ai/intro?.=6).
+	- Change the question you "ask the book" (`similarity_search`)
+	- Change the book and come up with a new question
+	- Try making a `PromptTemplate` where you pass your `{question}` in together with the output from the similarity search. Do some prompt engineering.
+<details>
+  <summary>[spoiler] (Solution): prompt engineering</summary>
+
+```python
+template = """Given the following section of a book:
+{search_output}
+
+Answer the following question:
+{Question}
+Answer:
+"""
+```
+
+</details>
+
+2. Watch videos on Sphere about document retrieval. Only need to watch until specified timestamps.
+	- ["Building the Future with LLMs, LangChain, & Pinecone" ***(watch from 20:43 to 30:24)***](https://youtu.be/nMniwlGyX-c?t=1243)
+	- [LangChain 🦜🔗 Basics Course - Video 10 (**stop at 3:35**)](https://sphere.segefjord.space/ai/langchain-basics?.=9)
+	- [LangChain 🦜🔗 Basics Course - Video 11 (**stop at 7:24**)](https://sphere.segefjord.space/ai/langchain-basics?.=10)
+
+3. Use the [documentation](https://python.langchain.com/docs/modules/data_connection/document_loaders/pdf) on `PyPDFDirectoryLoader` to load all books at once.
+4. 
+<br>
+<br>
+
+___
+# 🧠 Day 4 - BrainGPT ⚡️🦾
+To kick off the day, read ["How To Start a Startup"](http://www.paulgraham.com/start.html) (famous Paul Graham essay) ☀️
+
+1. Watch the advanced video on Sphere about parsing huge amounts of data into the LLM without going broke. Using `map reduce` is fine for large documents, but for ***huge*** documents like *books* it's gonna take a very long time and be way too expensive + hitting the OpenAI API calling limit (capped at $120/mo). Solution:
+	- [LangChain 🦜🔗 Basics Course - Video 19 (**full video**)](https://sphere.segefjord.space/ai/langchain-basics?.=18)
+			The Jupyter notebook from his video containing all code is located in:
+			`./Day 3/ 5 Levels Of Summarization - Novice To Expert.ipynb`
