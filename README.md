@@ -214,7 +214,10 @@ To kick off the day, read ["How To Start a Startup"](http://www.paulgraham.com/s
 The prototype chatbot you created yesterday is able to lookup selected pages of a book that seems relevant to a question, and include it in the context window. However, this means the AI doesn't have an *"understanding"* of the books in terms of the bigger picture. It's only able to understand the book a few pages at a time, stemming from the `similarity_search`. The ***"Best Representation Vectors"*** technique proposes a far more advanced approach with lots of advantages over a simple `similarity_search`.
 
 3. (***Advanced***) Can the same technique be used to give the AI a full comprehension of every 10+ books found in `Day 3/books`? Create a new notebook for this task.
+<br>
+<br>
 
+___
 # 🦜 Day 5 - Solve a real world problem
 
 Combine everything you learned in the past 4 days to solve a real world problem!
